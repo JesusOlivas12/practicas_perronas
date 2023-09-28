@@ -4,7 +4,7 @@ import { useState } from "react"
 
 export default function Counter(){
     const [counter, setCounter] = useState(0)
-        
+
     function increment(){
         setCounter(prev => prev + 1)
     }
@@ -17,15 +17,14 @@ export default function Counter(){
     }
 
     return (
-        <div className="flex justify-center items-center gap-3">
-            <button onClick={decrement} className="bg-red-500 w-8 h-8 rounded-md">
+        <div className="flex items-center justify-center gap-3">
+            <button onClick={decrement} className="w-8 h-8 bg-red-500 rounded-md">
                 -
             </button>
             <span>{counter}</span>
-            <button onClick={increment} className="bg-blue-600 w-8 h-8 rounded-md">
+            <button onClick={increment} className="w-8 h-8 bg-blue-600 rounded-md">
                 +
             </button>
         </div>
-
     )
 }
