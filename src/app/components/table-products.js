@@ -4,7 +4,7 @@ export default function TableProducts ({products = []}) {
             <thead>
                 <tr>
                     <th>
-                        lista
+                        Lista
                     </th> 
                     <th>
                         Productos.
