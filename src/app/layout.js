@@ -1,3 +1,4 @@
+import OrderContextProvider from './context/order'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -11,7 +12,11 @@ export const metadata = {
 export default function RootLayout ({ children }) {
   return (
     <html lang='en'>
-      <body className={`h-screen w-screen ${inter.className}`}>{children}</body>
+      <body className={`h-screen w-screen ${inter.className}`}>
+        <OrderContextProvider>
+          {children}
+        </OrderContextProvider>
+      </body>
     </html>
   )
 }
