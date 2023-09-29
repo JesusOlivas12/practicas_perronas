@@ -1,8 +1,8 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-export default function Counter(){
+export default function Counter({onChange}){
     const [counter, setCounter] = useState(0)
 
     function increment(){
@@ -15,6 +15,10 @@ export default function Counter(){
             return prev - 1
         } )
     }
+
+    useEffect(() => {
+        onChange && onChange(counter)
+    }, [counter, onChange])
 
     return (
         <div className="flex items-center justify-center gap-3">
