@@ -6,32 +6,33 @@ const products = [
     key: 1,
     name: 'Taco de asada',
     price: 20,
-    quantity: 3,
+    quantity: '',
   },
   {
     key: 1,
     name: 'Taco de pastor',
     price: 20,
-    quantity: 3,
+    quantity: '',
   },
   {
     key: 1,
     name: 'Taco de adobada',
     price: 20,
-    quantity: 3,
+    quantity: '',
   },
   {
     key: 1,
     name: 'Taco de piña',
     price: 20,
-    quantity: 3,
+    quantity:'',
   },
   {
     key: 1,
     name: 'Taco de rata',
     price: 5,
-    quantity: 9,
-  }
+    quantity:'',
+    
+  },
 ]
 
 export default function Home() {

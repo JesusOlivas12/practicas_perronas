@@ -1,10 +1,11 @@
+import Counter from "./counter";
 export default function TableProducts ({products = []}) {
     return (
         <table>
             <thead>
                 <tr>
                     <th>
-                        Lista
+                        Lista.
                     </th> 
                     <th>
                         Productos.
@@ -16,7 +17,7 @@ export default function TableProducts ({products = []}) {
                         Cantidad.
                     </th>
                     <th>
-                        Precio/Uni.
+                        Total.
                     </th>
                 </tr>
             </thead>
@@ -30,13 +31,15 @@ export default function TableProducts ({products = []}) {
                             {product?.name}
                         </td>
                         <td>
-                            {product?.price*product?.quantity} 
-                        </td>
-                        <td>
-                            {product?.quantity} 
-                        </td>
-                        <td>
                             {product?.price} 
+                        </td>
+                        <td>
+                            <Counter setCounter={product?.quantity} /> : {product?.quantity}
+                        
+                        </td>
+                        <td>
+                            
+                            {product?.price*<Counter/>}
                         </td>
                     </tr>
                 ))}
