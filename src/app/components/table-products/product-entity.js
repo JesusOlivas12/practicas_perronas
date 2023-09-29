@@ -2,9 +2,24 @@
 
 import { useState } from 'react'
 import Counter from '../counter'
+import useOrder from '@/app/hooks/use-order'
 
 export default function ProductEntity ({ product, i }) {
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState(1)
+  const { setOrder } = useOrder()
+
+  function handleSetQuantity (quantity) {
+    if (quantity === 0) {
+      setOrder(products => {
+        const newProducts = [...products]
+
+        newProducts.splice(i, 1)
+
+        return newProducts
+      })
+    }
+    setQuantity(quantity)
+  }
 
   return (
     <tr key={product.key}>
@@ -18,7 +33,7 @@ export default function ProductEntity ({ product, i }) {
         {product?.price}
       </td>
       <td>
-        <Counter onChange={setQuantity} />
+        <Counter onChange={handleSetQuantity} />
       </td>
       <td>
         {product?.price * quantity}

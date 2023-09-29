@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 
 export default function Counter ({ onChange }) {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(1)
 
   function increment () {
     setCounter(prev => prev + 1)
