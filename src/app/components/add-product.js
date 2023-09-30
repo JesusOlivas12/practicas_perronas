@@ -6,7 +6,7 @@ export default function AddProduct ({ products = [] }) {
 
   function handleSearchProduct (e) {
     setSearchProduct(() => {
-      const productsFiltered = products.filter(p => p?.name?.toLowerCase().includes(e.target.value.toLowerCase()))
+      const productsFiltered = products.filter(p => p?.name?.toLowerCase().split(' ').includes(e.target.value.toLowerCase()))
 
       if (e.target.value === '' || e.target.value == null) {
         return products
