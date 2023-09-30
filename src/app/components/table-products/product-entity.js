@@ -23,19 +23,19 @@ export default function ProductEntity ({ product, i }) {
 
   return (
     <tr key={product.key}>
-      <td>
+      <td className='border border-amber-500'>
         {i + 1}
       </td>
-      <td>
+      <td className='border border-amber-500'>
         {product?.name}
       </td>
-      <td>
+      <td className='border border-amber-500'>
         {product?.price}
       </td>
-      <td>
+      <td className='border border-amber-500'>
         <Counter onChange={handleSetQuantity} />
       </td>
-      <td>
+      <td className='border border-amber-500'>
         {product?.price * quantity}
       </td>
     </tr>
