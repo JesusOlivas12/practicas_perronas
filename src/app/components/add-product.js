@@ -29,7 +29,7 @@ export default function AddProduct ({ products = [] }) {
           className='w-full py-2 px-4 rounded-full focus:outline-none focus:ring focus:border-blue-300'
         />
       </div>
-      <div className='flex-col flex'>
+      <div className='flex-col flex border-l-pink-800 border   '>
 
         {searchProduct.map(product => (
 
