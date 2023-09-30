@@ -31,7 +31,7 @@ function ProductAccessEntity ({ product }) {
   return (
     <button
       onClick={handleAddProduct}
-      className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-9 px-4 rounded-md shadow-lg btn"
+      className='bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-9 px-4 rounded-md shadow-lg btn'
     >
       {product?.name}
     </button>

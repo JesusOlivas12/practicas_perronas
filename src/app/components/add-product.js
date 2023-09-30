@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import useOrder from '../hooks/use-order'
 
 export default function AddProduct ({ products = [] }) {
   const [searchProduct, setSearchProduct] = useState(products)
@@ -33,12 +34,37 @@ export default function AddProduct ({ products = [] }) {
 
         {searchProduct.map(product => (
 
-          <span key={product?.key}>
-            {product?.name}
-          </span>
+          <ProductEntity key={product?.key} product={product} />
         ))}
 
       </div>
     </div>
+  )
+}
+
+function ProductEntity ({ product = {} }) {
+  const { setOrder } = useOrder()
+
+  function handleAddProduct () {
+    setOrder(prev => {
+      const copy = [...prev]
+
+      const index = copy.findIndex(p => p?.id === product?.id)
+
+      if (index === -1) {
+        copy.push(product)
+      }
+
+      return copy
+    })
+  }
+
+  return (
+    <button
+      className='text-left'
+      onClick={handleAddProduct}
+    >
+      {product?.name}
+    </button>
   )
 }

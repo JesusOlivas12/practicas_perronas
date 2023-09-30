@@ -5,9 +5,9 @@ export default function TableProducts () {
   const { order } = useOrder()
 
   return (
-    <table>
+    <table className='w-full'>
 
-      <thead className='flex-auto border border-amber-500'>
+      <thead className='border border-amber-500'>
         <tr>
           <th className='border border-amber-500'>
             Lista.
