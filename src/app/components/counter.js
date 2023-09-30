@@ -26,7 +26,7 @@ export default function Counter ({ onChange }) {
         -
       </button>
       <span>{counter}</span>
-      <button onClick={increment} className='w-8 h-8 bg-blue-600 rounded-md'>
+      <button onClick={increment} className='w-8 h-8 bg-green-600 rounded-md'>
         +
       </button>
     </div>

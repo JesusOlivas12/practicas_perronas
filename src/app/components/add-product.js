@@ -20,7 +20,7 @@ export default function AddProduct ({ products = [] }) {
 
   return (
     <div>
-      <div className='p-3'>
+      <div className='border h-100 p-3'>
 
         <input
           onChange={handleSearchProduct}
@@ -31,7 +31,7 @@ export default function AddProduct ({ products = [] }) {
         ;color text-slate-200'
         />
       </div>
-      <div className='flex-col flex'>
+      <div className='flex-col flex border-l-pink-800 border   '>
 
         {searchProduct.map(product => (
 
