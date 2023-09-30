@@ -15,7 +15,7 @@ export default function Home () {
         <TableProducts products={products} />
       </section>
       <section className='border border-red-500'>
-        <AddProduct />
+        <AddProduct products={products} />
       </section>
     </main>
   )

@@ -1,3 +1,4 @@
+// base de datos falsa
 export const products = [
   {
     key: 1,
