@@ -3,6 +3,7 @@
 import { products, quickAccessProducts } from '@/utils/const'
 import TableProducts from './components/table-products/table-products'
 import QuickAccess from './components/quick_access'
+import AddProduct from './components/add-product'
 
 export default function Home () {
   return (
@@ -14,7 +15,7 @@ export default function Home () {
         <TableProducts products={products} />
       </section>
       <section className='border border-red-500'>
-        a
+        <AddProduct />
       </section>
     </main>
   )
