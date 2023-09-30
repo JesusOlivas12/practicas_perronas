@@ -22,20 +22,20 @@ export default function ProductEntity ({ product, i }) {
   }
 
   return (
-    <tr key={product.key}>
-      <td className='border border-amber-500'>
+    <tr key={product.key} className='decoration-clone bg-gradient-to-b from-emerald-100 to-cyan-200 text-black '>
+      <td className='border border-amber-500 text-center'>
         {i + 1}
       </td>
-      <td className='border border-amber-500'>
+      <td className='border border-amber-500 text-center'>
         {product?.name}
       </td>
-      <td className='border border-amber-500'>
+      <td className='border border-amber-500 text-center'>
         {product?.price}
       </td>
-      <td className='border border-amber-500'>
+      <td className='border border-amber-500 text-center py-2'>
         <Counter onChange={handleSetQuantity} />
       </td>
-      <td className='border border-amber-500'>
+      <td className='border border-amber-500 text-center'>
         {product?.price * quantity}
       </td>
     </tr>
