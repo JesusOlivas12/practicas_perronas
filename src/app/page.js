@@ -7,8 +7,8 @@ import AddProduct from './components/add-product'
 
 export default function Home () {
   return (
-    <main className='  flex h-full'>
-      <section className='  border border-red-500'>
+    <main className='flex h-full bg-emerald-200'>
+      <section className='border border-red-500'>
         <QuickAccess quickAccessProducts={quickAccessProducts} />
       </section>
       <section className='flex-1 border border-red-500'>

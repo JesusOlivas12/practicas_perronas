@@ -20,15 +20,13 @@ export default function AddProduct ({ products = [] }) {
 
   return (
     <div>
-      <div className='border h-100 p-3'>
+      <div className=' max-w-md mx-auto rounded-lg p-4 shadow-lg'>
 
         <input
           onChange={handleSearchProduct}
           type='text'
           placeholder='Buscar...'
-          className='w-full h-full pl-2 bg-black opacity-60
-        outline-none rounded-md italic font-style: italic;
-        ;color text-slate-200'
+          className='w-full py-2 px-4 rounded-full focus:outline-none focus:ring focus:border-blue-300'
         />
       </div>
       <div className='flex-col flex border-l-pink-800 border   '>

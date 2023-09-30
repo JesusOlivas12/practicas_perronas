@@ -9,20 +9,20 @@ export default function TableProducts () {
 
       <thead className='flex-auto border border-amber-500'>
         <tr>
-          <th className=' border border-amber-500'>
-            Lista        .
+          <th className='border border-amber-500'>
+            Lista.
           </th>
-          <th className=' border border-amber-500'>
-            Productos    .
+          <th className='border border-amber-500'>
+            Productos.
           </th>
-          <th className=' border border-amber-500'>
-            Precio       .
+          <th className='border border-amber-500'>
+            Precio.
           </th>
-          <th className=' border border-amber-500'>
-            Cantidad     .
+          <th className='border border-amber-500'>
+            Cantidad.
           </th>
-          <th className=' border border-amber-500'>
-            Total        .
+          <th className='border border-amber-500'>
+            Total.
           </th>
         </tr>
       </thead>
