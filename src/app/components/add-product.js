@@ -6,7 +6,7 @@ export default function AddProduct ({ products = [] }) {
 
   function handleSearchProduct (e) {
     setSearchProduct(() => {
-      const productsFiltered = products.filter(p => p?.name?.toLowerCase().split(' ').includes(e.target.value.toLowerCase()))
+      const productsFiltered = products.filter(p => p?.name?.toLowerCase().includes(e.target.value.toLowerCase()))
 
       if (e.target.value === '' || e.target.value == null) {
         return products
@@ -31,7 +31,16 @@ export default function AddProduct ({ products = [] }) {
         ;color text-slate-200'
         />
       </div>
+      <div className='flex-col flex'>
 
+        {searchProduct.map(product => (
+
+          <span key={product?.key}>
+            {product?.name}
+          </span>
+        ))}
+
+      </div>
     </div>
   )
 }
