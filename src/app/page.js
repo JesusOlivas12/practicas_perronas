@@ -7,7 +7,7 @@ import AddProduct from './components/add-product'
 
 export default function Home () {
   return (
-    <main className='flex h-full'>
+    <main className='flex h-full bg-emerald-200'>
       <section className='border border-red-500'>
         <QuickAccess quickAccessProducts={quickAccessProducts} />
       </section>
