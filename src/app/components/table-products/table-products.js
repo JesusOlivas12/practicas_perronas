@@ -1,3 +1,4 @@
+'use client'
 import useOrder from '@/app/hooks/use-order'
 import ProductEntity from './product-entity'
 
@@ -5,7 +6,7 @@ export default function TableProducts () {
   const { order } = useOrder()
 
   return (
-    <table className='w-full min-w-full bg-white shadow-md rounded-lg overflow-hidden'>
+    <table className='w-full min-w-full overflow-hidden bg-white rounded-lg shadow-md'>
       <thead className='bg-[#4D5382] text-white '>
         <tr>
           <th className='border border-amber-500'>

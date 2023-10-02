@@ -1,5 +1,3 @@
-'use client'
-
 import { products, quickAccessProducts } from '@/utils/const'
 import TableProducts from './components/table-products/table-products'
 import QuickAccess from './components/quick_access'

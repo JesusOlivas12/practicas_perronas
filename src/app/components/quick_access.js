@@ -1,10 +1,11 @@
+'use client'
 import useOrder from '../hooks/use-order'
 
 export default function QuickAccess ({ quickAccessProducts = [] }) {
   return (
-    <div className='p-1  '>
+    <div className='p-1 '>
       <h1 className='bg-[#CACF85] text-black font-bold py-4 px-8 rounded-lg shadow-lg w-200 h-17 text-center'>Acceso rapido</h1>
-      <div className='p-3 grid grid-cols-2 gap-4  '>
+      <div className='grid grid-cols-2 gap-4 p-3 '>
         {quickAccessProducts.map(product => <ProductAccessEntity key={product?.key} product={product} />)}
       </div>
     </div>

@@ -17,26 +17,40 @@ export default function ProductEntity ({ product, i }) {
 
         return newProducts
       })
+      return
     }
+    setOrder(products => {
+      const newProducts = [...products]
+
+      newProducts[i].quantity = quantity
+
+      return newProducts
+    })
     setQuantity(quantity)
   }
 
   return (
     <tr key={product.key} className='decoration-clone bg-gradient-to-b from-[#CACF85] to-[#658E9C] text-white  '>
-      <td className='border border-amber-500 text-center'>
+      <td className='text-center border border-amber-500'>
         {i + 1}
       </td>
-      <td className='border border-amber-500 text-center'>
+      <td className='text-center border border-amber-500'>
         {product?.name}
       </td>
-      <td className='border border-amber-500 text-center'>
-        {product?.price}
+      <td className='text-center border border-amber-500'>
+        {product?.price.toLocaleString('es-MX', {
+          style: 'currency',
+          currency: 'MXN'
+        })}
       </td>
-      <td className='border border-amber-500 text-center py-2'>
+      <td className='py-2 text-center border border-amber-500'>
         <Counter onChange={handleSetQuantity} />
       </td>
-      <td className='border border-amber-500 text-center'>
-        {product?.price * quantity}
+      <td className='text-center border border-amber-500'>
+        {(product?.price * quantity).toLocaleString('es-MX', {
+          style: 'currency',
+          currency: 'MXN'
+        })}
       </td>
     </tr>
   )
