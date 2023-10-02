@@ -1,6 +1,6 @@
 export default function Buy () {
   return (
-    <div>
+    <div className='h-[15%]'>
       <span>
         total
       </span>

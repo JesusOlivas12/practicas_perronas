@@ -14,16 +14,16 @@ export default function AddProduct ({ products = [] }) {
   }
 
   return (
-    <div className='flex flex-col h-full py-5 gap-4 px-2 '>
+    <div className='flex flex-col h-[85%] py-5 gap-4 '>
       <div className='max-w-md mx-auto rounded-lg shadow-lg'>
         <input
           onChange={handleSearchProduct}
           type='text'
           placeholder='Buscar...'
-          className='w-full py-2 px-4 rounded-full focus:outline-none focus:ring focus:border-blue-300'
+          className='w-full px-4 py-2 rounded-full focus:outline-none focus:ring focus:border-blue-300'
         />
       </div>
-      <div className='flex-col flex overflow-y-auto flex-1'>
+      <div className='flex flex-col flex-1 overflow-y-auto'>
         {searchProduct.length > 0
           ? (
               searchProduct.map((product) => (
@@ -57,7 +57,7 @@ function ProductEntity ({ product = {} }) {
   }
 
   return (
-    <div className=' flex justify-center items-center p-1 '>
+    <div className='flex items-center justify-center p-1 '>
       <button
         className='bg-[#518988]  font-bold py-4 px-4 rounded-lg w-60 h-15 text-center shadow-md border border-[#514663] opacity-55'
         onClick={handleAddProduct}

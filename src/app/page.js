@@ -8,14 +8,14 @@ import Buy from './components/table-products/confirm-buy'
 
 export default function Home () {
   return (
-    <main className='flex h-full bg-emerald-200 '>
+    <main className='flex h-full overflow-hidden bg-emerald-200'>
       <section className='border border-red-500'>
         <QuickAccess quickAccessProducts={quickAccessProducts} />
       </section>
       <section className='flex-1 border border-red-500'>
         <TableProducts products={products} />
       </section>
-      <section className='border border-red-500 h-full flex flex-col overflow-hidden'>
+      <section className='flex flex-col px-2 overflow-hidden border border-red-500'>
         <AddProduct products={products} />
         <Buy />
       </section>
