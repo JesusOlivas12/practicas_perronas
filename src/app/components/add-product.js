@@ -1,28 +1,21 @@
-'use client'
-import { useState } from 'react'
-import useOrder from '../hooks/use-order'
+import React, { useState } from 'react';
+import useOrder from '../hooks/use-order';
 
-export default function AddProduct ({ products = [] }) {
-  const [searchProduct, setSearchProduct] = useState(products)
+export default function AddProduct({ products = [] }) {
+  const [searchProduct, setSearchProduct] = useState(products);
 
-  function handleSearchProduct (e) {
-    setSearchProduct(() => {
-      const productsFiltered = products.filter(p => p?.name?.toLowerCase().includes(e.target.value.toLowerCase()))
+  function handleSearchProduct(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const productsFiltered = products.filter(
+      (p) => p?.name?.toLowerCase().includes(searchTerm)
+    );
 
-      if (e.target.value === '' || e.target.value == null) {
-        return products
-      }
-
-      return productsFiltered
-    })
+    setSearchProduct(productsFiltered);
   }
-
-  console.log(searchProduct)
 
   return (
     <div>
-      <div className=' max-w-md mx-auto rounded-lg p-4 shadow-lg'>
-
+      <div className='max-w-md mx-auto rounded-lg p-4 shadow-lg'>
         <input
           onChange={handleSearchProduct}
           type='text'
@@ -30,16 +23,18 @@ export default function AddProduct ({ products = [] }) {
           className='w-full py-2 px-4 rounded-full focus:outline-none focus:ring focus:border-blue-300'
         />
       </div>
-      <div className='flex-col flex border-l-pink-800 border   '>
-
-        {searchProduct.map(product => (
-
-          <ProductEntity key={product?.key} product={product} />
-        ))}
-
+      <div className='flex-col flex border-l-pink-800 border'>
+        {searchProduct.length >0 ? (
+          searchProduct.map((product) => (
+            <ProductEntity key={product?.key} product={product} />
+          ))
+        ) : (
+          
+          <p>No se encontraron productos.</p>
+        )}
       </div>
     </div>
-  )
+  );
 }
 
 function ProductEntity ({ product = {} }) {
@@ -60,11 +55,14 @@ function ProductEntity ({ product = {} }) {
   }
 
   return (
-    <button
-      className='text-left'
-      onClick={handleAddProduct}
-    >
-      {product?.name}
-    </button>
+    <div className=" flex justify-center items-center p-1 h-full ">
+      <button
+        className="bg-[#518988]  font-bold py-4 px-4 rounded-lg w-60 h-15 text-center shadow-md border border-[#514663] opacity-55"
+        onClick={handleAddProduct}
+      >
+        {product?.name}
+      </button>
+    </div>
   )
 }
+

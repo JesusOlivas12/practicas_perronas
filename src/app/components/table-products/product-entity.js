@@ -22,7 +22,7 @@ export default function ProductEntity ({ product, i }) {
   }
 
   return (
-    <tr key={product.key} className='decoration-clone bg-gradient-to-b from-emerald-100 to-cyan-200 text-black '>
+    <tr key={product.key} className='decoration-clone bg-gradient-to-b from-[#CACF85] to-[#658E9C] text-white  '>
       <td className='border border-amber-500 text-center'>
         {i + 1}
       </td>

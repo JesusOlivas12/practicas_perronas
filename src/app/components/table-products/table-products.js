@@ -6,7 +6,7 @@ export default function TableProducts () {
 
   return (
     <table className='w-full min-w-full bg-white shadow-md rounded-lg overflow-hidden'>
-      <thead className='bg-emerald-500 text-white '>
+      <thead className='bg-[#4D5382] text-white '>
         <tr>
           <th className='border border-amber-500'>
             Lista.
