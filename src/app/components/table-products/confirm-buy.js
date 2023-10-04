@@ -1,6 +1,8 @@
 'use client'
 
 import useOrder from '@/app/hooks/use-order'
+import Link from 'next/link'
+
 
 export default function Buy () {
   const { total } = useOrder()
@@ -17,12 +19,12 @@ export default function Buy () {
         </span>
       </span>
       <div className='flex gap-10'>
-        <button className='bg-[#8CBA80] hover:bg-[#c1bdb366] text-black font-bold py-9 px-4 rounded-md shadow-lg btn'>
+        <Link href={'/ticket'} className='bg-[#8CBA80] hover:bg-[#c1bdb366] text-black font-bold py-9 px-4 rounded-md shadow-lg btn'>
           Domicilio
-        </button>
-        <button className='bg-[#8CBA80] hover:bg-[#c1bdb366] text-black font-bold py-9 px-4 rounded-md shadow-lg btn'>
+        </Link>
+        <Link href={'/ticket'} className='bg-[#8CBA80] hover:bg-[#c1bdb366] text-black font-bold py-9 px-4 rounded-md shadow-lg btn'>
           Comprar
-        </button>
+        </Link>
       </div>
     </div>
   )

@@ -139,6 +139,13 @@ export const products = [
     name: 'Papa Loca',
     price: 20,
     quantity: 1
+  },
+  {
+    key: 20,
+    id: 20,
+    name: 'Taco de Cagada',
+    price: 200,
+    quantity: 1
   }
 ]
 export const quickAccessProducts = [
