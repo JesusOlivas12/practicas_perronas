@@ -1,11 +1,9 @@
-
-
 'use client'
 
 import useOrder from '@/app/hooks/use-order'
 import Link from 'next/link'
 
-export default function F() {
+export default function Ticket () {
   const { total } = useOrder()
   return (
     <main className='flex flex-col items-start justify-end h-screen'>
@@ -20,10 +18,10 @@ export default function F() {
           </span>
         </span>
         <div className='flex gap-10 mt-4'>
-          <Link href={'/'} className='bg-[#8CBA80] hover:bg-[#c1bdb366] text-black font-bold py-6 px-4 rounded-md shadow-lg btn'>
-          Cancelar Pedido
+          <Link href='/' className='bg-[#8CBA80] hover:bg-[#c1bdb366] text-black font-bold py-6 px-4 rounded-md shadow-lg btn'>
+            Cancelar Pedido
           </Link>
-          <Link href={'/'} className=' bg-[#8CBA80] hover:bg-[#c1bdb366] text-black font-bold py-6 px-4 rounded-md shadow-lg btn '>
+          <Link href='/' className=' bg-[#8CBA80] hover:bg-[#c1bdb366] text-black font-bold py-6 px-4 rounded-md shadow-lg btn '>
             Finalizar Compra
           </Link>
         </div>
@@ -31,5 +29,3 @@ export default function F() {
     </main>
   )
 }
-
-  
