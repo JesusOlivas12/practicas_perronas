@@ -1,5 +1,4 @@
 'use client'
-
 import useOrder from '@/app/hooks/use-order'
 import Link from 'next/link'
 
@@ -14,6 +13,7 @@ export default function Ticket () {
             {total.toLocaleString('es-MX', {
               style: 'currency',
               currency: 'MXN'
+
             })}
           </span>
         </span>
